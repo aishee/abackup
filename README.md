@@ -14,61 +14,35 @@
 #### About
 ABackup is a backup script designed for Linux Server backups.
 
-ABackup is released under GNU GPL v2. By downloading, using and editing ABackup you must agree to the terms set forth in the license provided.
-
 ---------------------------------------
 #### Features 
-* Web Based Administration Panel
-  * Add Backup Servers
-  * Add Backup Jobs
-  * Add Users
-  * Add ACL's
-  * View Backups
-  * Download Backups
-  * Restore Backups
-  * Session security (IP Check + inactivity timeout)
-* Json Flat File Database (no MySQL database involved)
-* Backups ran using cron
+* Add Backup Servers
+* Add Users
+* Add Backup Jobs
+* Add ACL's
+* View Backups
+* Download Backups
+* Restore Backups
+* Json Flat File Database
+* Session security
+* Backups using cron
 * Server authentication using password or RSA key
-* Email notifications (sendmail / SMTP)
 * Backup rotation / auto delete
-* Full Backups
-* Incremental Backups
-* MySQL Backups
-* OpenVZ Node Backups
-* cPanel Account Backups
-* 2-Factor Authentication (Google Authenticator)
+* Email notifications
+* MySQL, Server, CPanel Backups
+* Google Authenticator
 * Backup Encryption (AES-256/GPG)
 * User accounts / ACL's
 
 ---------------------------------------
-#### Installation
-You may use one of the following commands to install ABackup on your storage/backup server.
-The backup server **has** to be running CentOS/Debian/Ubuntu, but the server(s) to be backed up may run any linux distrubution.
-
-`/usr/bin/env bash <((wget -qO - ABackup/install.sh))`
-
-or
-
-`/usr/bin/env bash <((curl -sL ABackup/install.sh))`
+####Install
+ * Clone to project: git clone https://github.com/aishee/abackup.git
+ * Set permission for file ainstall.sh: chmod +x ainstall.sh
+ * Execute file ainstall.sh: ./ainstall.sh
+ * Enjoy
 
 ---------------------------------------
-#### System/Software Requirements
-* Backup Server (the server to store all backups)
-  * Minimal / Fresh OS Installation
-  * Linux
-  
-* Host Server (the server to be backed up)
-  * File
-    * SSH + SFTP
-    * tar
-    * *99% of servers meet this requirement*
-  * MySQL
-    * MySQL 5
-  * OpenVZ
-    * SSH + SFTP
-    * vzdump
-    * lvm2
-    * It is recommended that /vz is a logical volume
+#### System Requirements
+  * Linux OS Installation
   
 ---------------------------------------
